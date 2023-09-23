@@ -1,1 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int a[100],i,n,num,k,b;
+    printf("Enter the number of elements of array:");
+    scanf("%d",&n);
+    
+    for(i=0;i<n;i++)
+    {
+        
+        printf("Enter the number %d:",(i+1));
+        scanf("%d",&a[i]);
+        
+    }
+    printf("Enter the number to be found:");
+    scanf("%d",&num);
+    for(i=0;i<n;i++)
+    {
+       if(num==a[i])
+       {
+           b=num;
+           printf("Number was found at index %d",i);
+       }
+       break;
+    }
+        if(b!=num)
+        {
+           printf("Number was not found");
+        }
+    return 0;
+}
 
