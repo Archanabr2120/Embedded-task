@@ -1,1 +1,33 @@
+clude <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[20];
+    char letter;
+    int i, n;
+    int count = 0;
+
+    printf("Enter the string: ");
+    scanf("%s", str);
+
+    printf("Enter the letter to be found: ");
+    scanf(" %c", &letter);  
+
+    n = strlen(str);
+
+    for (i = 0; i < n; i++) 
+    {  
+        if (letter == str[i]) {
+            count++;
+        }
+    }
+
+    if (count != 0) {
+        printf("Number of occurrences of %c is %d\n", letter, count);
+    } else {
+        printf("Letter not found in string!\n");
+    }
+
+    return 0;
+}
 
