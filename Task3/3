@@ -1,1 +1,26 @@
+#include <stdio.h>
+#include <string.h>
 
+int main() {
+    char str[20];
+    char letter,a;
+    int i;
+    printf("Enter the string: ");
+    scanf("%s", str);
+    printf("Enter the index to be replaced: ");
+    scanf("%d", &i);
+    printf("Enter the letter: ");
+    scanf(" %c", &letter); 
+        if(str[i]==letter)
+      {
+        printf("Character are same,Nothing got replaced!\n");
+      }
+        else
+        {
+            a=str[i];
+            str[i]=letter;
+            printf("Replaced %c with %c \n ",a,letter);
+        }
+    printf("The Final String is %s\n",str);
+    return 0;
+}
