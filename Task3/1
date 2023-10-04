@@ -1,1 +1,26 @@
-
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[20];
+    char letter;
+    int i,b;
+    printf("Enter the string:");
+    scanf("%s",str);
+    printf("Enter the letter to be found:");
+    scanf("%s",&letter);
+    int  n=strlen(str);
+    for(i=0;i<=n;i++)
+    {
+        if(letter == str[i])
+        {
+            b=i;
+            printf("Index of first occurrence is: %d",i);
+            break;
+        }
+    }
+    if(b!=i)
+    {
+        printf("Letter not found in the string!");
+    }
+    return 0;
+}
