@@ -1,1 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[20], str2[20],str3[20];
+    int i, j,index;
+
+    printf("Enter the string: ");
+    scanf("%s", str1);
+    printf("Enter the substring: ");
+    scanf("%s", str2);
+    printf("Enter the index from which the substring is to be inserted:");
+    scanf("%d",&index);
+    int n1 = strlen(str1);
+    int n2 = strlen(str2);
+            for (i = n1; i >= index; i--) 
+            {
+            str1[i + n2] = str1[i];
+           }
+
+        for (j = 0; j < n2; j++) 
+        {
+            str1[index + j] = str2[j];
+        }
+            str1[n1+n2] = '\0';
+    
+    printf("Final string is %s",str1);
+ return 0;
+}
 
