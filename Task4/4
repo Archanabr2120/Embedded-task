@@ -1,1 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[20], str2[20],str3[20];
+    int i, a = -1, b = 0;
+
+    printf("Enter the string: ");
+    scanf("%s", str1);
+    printf("Enter the substring: ");
+    scanf("%s", str2);
+    printf("Enter the substring to be replaced:");
+    scanf("%s",str3);
+    int n1 = strlen(str1);
+    int n2 = strlen(str2);
+    int n3 = strlen(str3);
+    int n=n1-n2+n3;
+    for (i = 0; i <= n1 - n2; i++) {
+        int j;
+        for (j = 0; j < n2; j++) {
+            if (str1[i + j] != str2[j]) {
+                break;
+            }
+        }
+        if (j == n2) {
+            a = i;
+            for(j=0;j<n3;j++)
+            {
+                str1[i+j]=str3[j];
+            }
+            str1[n] = '\0';
+            break;
+        }
+    }
+
+    if (a != -1) {
+        printf("The Final string is %s",str1);
+    } else {
+        printf("The substring is NOT found in the main string!\n");
+    }
+
+    return 0;
+}
 
