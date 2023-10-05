@@ -1,1 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[20], str2[20];
+    int i, a = -1, b = 0;
+
+    printf("Enter the string: ");
+    scanf("%s", str1);
+    printf("Enter the substring: ");
+    scanf("%s", str2);
+
+    int n1 = strlen(str1);
+    int n2 = strlen(str2);
+
+    for (i = 0; i <= n1 - n2; i++) {
+        int j;
+        for (j = 0; j < n2; j++) {
+            if (str1[i + j] != str2[j]) {
+                break;
+            }
+        }
+        if (j == n2) {
+            a = i;
+            break;
+        }
+    }
+
+    if (a != -1) {
+        printf("The substring is present from the index %d!\n", a);
+    } else {
+        printf("The substring is NOT found in the main string!\n");
+    }
+
+    return 0;
+}
 
