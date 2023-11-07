@@ -11,6 +11,8 @@ int main() {
     scanf("%d", &i);
     printf("Enter the letter: ");
     scanf(" %c", &letter); 
+    for(i=0;i<n;i++)
+    {
         if(str[i]==letter)
       {
         printf("Character are same,Nothing got replaced!\n");
@@ -20,6 +22,7 @@ int main() {
             a=str[i];
             str[i]=letter;
             printf("Replaced %c with %c \n ",a,letter);
+        }
         }
     printf("The Final String is %s\n",str);
     return 0;
